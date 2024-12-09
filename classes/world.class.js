@@ -38,6 +38,9 @@ class World {
                 this.character.hit();
                 this.statusBar.setPercentage(this.character.energy);
             }
+            if(this.character.jumpedOn(enemy)) {
+                console.log("jumped on");
+            }
 
             this.throwableObjects.forEach((bottle) => {
                 if(bottle.isHitting(enemy)) {
