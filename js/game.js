@@ -5,8 +5,6 @@ let keyboard = new Keyboard();
 function init() {
     canvas = document.getElementById("canvas");
     world = new World(canvas, keyboard);
-
-    console.log("My Character is ", world.character);
 }
 
 window.addEventListener("keydown", (event) => {
@@ -25,6 +23,9 @@ window.addEventListener("keydown", (event) => {
         break;
         case " ":
             keyboard.SPACE = true;
+        break;
+        case "d":
+            keyboard.D = true;
         break;
         default:
         break;
@@ -47,6 +48,9 @@ window.addEventListener("keyup", (event) => {
         break;
         case " ":
             keyboard.SPACE = false;
+        break;
+        case "d":
+            keyboard.D = false;
         break;
         default:
         break;
