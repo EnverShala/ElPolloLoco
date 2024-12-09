@@ -62,9 +62,9 @@ class MovableObject extends DrawableObject {
   }
 
   isColliding(mo) {
-    return (this.x + 50) + (this.width - 80) > mo.x &&
+    return (this.x + 25) + (this.width - 25) > mo.x &&
     (this.y + 225) + (this.height - 50) > mo.y &&
-    (this.x + 50) < mo.x &&
+    (this.x + 25) < mo.x &&
     (this.y + 225) < mo.y + mo.height;
   }
 
@@ -76,9 +76,9 @@ class MovableObject extends DrawableObject {
   }
 
   jumpedOn(mo) {
-    return this.x + this.width > mo.x &&
+    return (this.x + 25) + (this.width - 25) > mo.x &&
     this.y + this.height > mo.y &&
-    this.x < mo.x &&
+    (this.x + 25) < mo.x &&
     this.isAboveGround(); // &&
     //this.y < mo.y + mo.height;
   }
